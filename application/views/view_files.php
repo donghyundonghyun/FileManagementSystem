@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: donghyun
- * Date: 2017. 2. 16.
- * Time: PM 3:49
- */
+
+    foreach($myfiles as $file){
+        echo '<a href="/index.php/upload/fileinfo/'.$file->ID.'" >'.$file->filename.'</a>';
+        echo '<br />';
+    }
+
+?>

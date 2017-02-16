@@ -38,4 +38,9 @@ class Authentication extends CI_Controller {
             redirect('/authentication/loginpage/');
         }
     }
+
+    public function logout(){
+        $this->session->sess_destroy();
+        redirect('/authentication/loginpage');
+    }
 }
