@@ -25,4 +25,13 @@ class Auth_model extends CI_Model
         else
             return $query->row()->password;
     }
+
+    public function getUserInfo($user_id) {
+        return $this->db->get_where('user', array('id'=>$user_id))->row();
+    }
+
+    public function editmyinfo($data, $user_id){
+        $this->db->where('id',$user_id);
+		$this->db->update('user',$data);
+    }
 }
