@@ -1,4 +1,4 @@
-<nav class="navbar-fixed navbar-default" style="background-color: #5FCE51; border-color: #FFFFFF;">
+<nav class="navbar-fixed navbar-default" style="background-color: #02B875; border-color: #FFFFFF;">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -20,7 +20,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-6 col-md-2" style="background: white; height:100vh;">
+        <div class="col-xs-6 col-md-2" style="background: white; min-height:100vh; hight:auto">
             <table border="0" cellpadding="0" cellspacing="0" width="40"border="1">
                 <tr>
                     <td>
@@ -39,4 +39,4 @@
                 </p></a>
 
         </div>
-        <div class="col-xs-12 col-md-10" style="background: #eeeeee; height:100vh;">
+        <div class="col-xs-12 col-md-10" style="background: #eeeeee; min-height:100vh; hight:auto">

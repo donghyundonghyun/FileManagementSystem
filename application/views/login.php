@@ -7,7 +7,7 @@
                 <input type="text" name="user" placeholder="Username">
                 <input type="password" name="pass" placeholder="Password">
                 <input type="submit" name="login" class="login loginmodal-submit" value="Login"
-                        style="background-color: #5FCE51;">
+                        style="background-color: #02B875;">
             </form>
 
 

@@ -14,6 +14,10 @@ class Main extends CI_Controller {
 
         $myfiles = $this->file_model->getFilesByUser($this->session->userdata('user_id'));
 
+        for($i=0; $i<count($myfiles); $i++) {
+            $myfiles[$i]->last = $this->file_model->getLastUpdate($myfiles[$i]->ID);
+        }
+
         $this->load->view("view_files",array("myfiles"=>$myfiles));
         $this->load->view("footer");
     }

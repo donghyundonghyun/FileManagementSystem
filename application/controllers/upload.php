@@ -18,8 +18,11 @@ class Upload extends CI_Controller {
 
         $filesName = $this->file_model->getFilesName($files_id);
         $realfiles = $this->file_model->getRealFiles($files_id);
+
+        $last = $this->file_model->getLastUpdate($files_id);
+
         $this->load->view("file_manage",
-            array('rfiles'=>$realfiles, 'files_id'=>$files_id, 'filesName'=>$filesName));
+            array('rfiles'=>$realfiles, 'files_id'=>$files_id, 'filesName'=>$filesName, 'last'=>$last));
 
         $this->load->view("footer");
     }
@@ -36,7 +39,6 @@ class Upload extends CI_Controller {
         $config['upload_path']          = $path;
         $config['allowed_types']        = '*';
         $config['max_size']             = 0;
-        //$config['detect_mime']        = FALSE;
 
 
         $this->load->library('upload', $config);
@@ -47,11 +49,11 @@ class Upload extends CI_Controller {
             echo $this->upload->display_errors();
         }
         else {
-            $data = array('upload_data' => $this->upload->data());
-
             $this->file_model->addfile($files_id, $this->upload->data('file_name'),
                                        $this->upload->data('file_size'),
                                         $this->upload->data('client_name'));
+
+
 
             redirect('/upload/fileinfo/'.$files_id);
             //$this->load->view('upload_success', $data);
@@ -81,5 +83,13 @@ class Upload extends CI_Controller {
         $this->file_model->deletefile($fileid);
 
         redirect("upload/fileinfo/".$files_id);
+    }
+
+
+    public function addProj(){
+        $name = $this->input->post("projName");
+        $this->file_model->addProj($this->session->userdata("user_id"),$name);
+
+        redirect("main");
     }
 }

@@ -50,4 +50,20 @@ class File_model extends CI_Model
         $this->db->delete('files_info', array('ID'=>$fileid));
     }
 
+
+    public function getLastUpdate($files_id){
+        $this->db->order_by('created_date', 'DESC');
+
+        $query = $this->db->get_where('files_info', array('files_id'=>$files_id));
+        if($query->num_rows() == 0)
+            return '<span style="color:red">미업로드</span>';
+        else
+            return $query->row()->created_date;
+    }
+
+    public function addProj($user_id, $name){
+        $this->db->set('filename',$name);
+        $this->db->set('created_user',$user_id);
+        $this->db->insert('files');
+    }
 }
