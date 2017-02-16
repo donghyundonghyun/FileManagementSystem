@@ -1,0 +1,60 @@
+.pptpanel {
+    margin: 20px 0;
+}
+
+.pptpanel-title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.pptpanel-detail-wrapper {
+    margin-top: 10px;
+}
+
+.pptpanel-left {
+    padding: 10px;
+}
+
+.pptpanel-right {
+    padding: 10px;
+}
+
+.pptpanel-thumb {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px #888888;
+}
+
+.pptpanel-revision {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px #888888;
+    padding: 20px;
+}
+
+.pptpanel-thumb-header {
+    padding: 10px;
+    background-color: #DDDDDD;
+}
+
+.pptpanel-thumb-body {
+    padding: 10px;
+}
+
+.pptpanel-revision-nth {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px #888888;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.pptpanel-revision-title {
+    color: #333333;
+}
+
+.pptpanel-revision-detail {
+    color: #555555;
+    font-size: 0.8em;
+}
+
+.hover-a:hover, .hover-a:focus {
+    text-decoration: none;
+}
