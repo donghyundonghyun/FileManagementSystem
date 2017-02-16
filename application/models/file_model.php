@@ -16,6 +16,7 @@ class File_model extends CI_Model
 
 
     public function getRealFiles($files_id){
+        $this->db->order_by('ID', 'DESC');
         $query = $this->db->get_where('files_info', array('files_id'=>$files_id));
         if($query->num_rows() == 0)
             return null;
