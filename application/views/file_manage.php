@@ -95,8 +95,6 @@ $('#contentModal').on('show.bs.modal', function (event) {
 
     modal.find('.modal-title').text(title);
 
-
-
     $.ajax({
         url:'/index.php/upload/viewcontent/'+fileid,
         dataType:'json',
@@ -118,8 +116,7 @@ $('#contentModal').on('show.bs.modal', function (event) {
             });
 
 
-            editor.setValue(data);
-//            modal.find('.modal-body pre').text(data);
+            editor.setValue(data,-1);
         },
         error : function(xhr, status, error) {
             alert("에러가 발생했습니다. 다시시도해주세요");

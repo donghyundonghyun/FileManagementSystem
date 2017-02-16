@@ -28,7 +28,7 @@ class Main extends CI_Controller {
     function diff($files_id){
 
         $filenames = $this->file_model->getCurrentFiles($files_id);
-        $cmd = 'diff -u static/uploads/'.$files_id.'/'.$filenames[0]->real_filename.' static/uploads/'.$files_id.'/'.$filenames[1]->real_filename;
+        $cmd = 'diff -u static/uploads/'.$files_id.'/'.$filenames[1]->real_filename.' static/uploads/'.$files_id.'/'.$filenames[0]->real_filename;
         $diff =  `$cmd`;
 
 
@@ -47,7 +47,7 @@ class Main extends CI_Controller {
 
         $this->load->view("header");
         $this->load->view('navbar', array('name'=>$user_info->name, 'email'=>$user_info->email));
-        $this->load->view("diff",array("diff"=>$diff, "status"=>$status, "first"=>$filenames[0]->real_filename, "second"=>$filenames[1]->real_filename));
+        $this->load->view("diff",array("diff"=>$diff, "status"=>$status, "first"=>$filenames[1]->real_filename, "second"=>$filenames[0]->real_filename));
         $this->load->view("footer");
     }
 
