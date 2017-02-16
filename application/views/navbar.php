@@ -32,15 +32,15 @@
                         <img src="https://cdn0.iconfinder.com/data/icons/connection/512/icon-16.png" width="100" height="100"></td>
                     </center>
                 <br>               
-                 <center>
+                 <div style="text-align: center;">
                     
                       <b1 class="profile_style">
-                        김성훈 <a href="/index.php/authentication/mypage" data-toggle="tooltip" data-placement="right" title="개인정보 수정"
+                        <?=$name?> <a href="/index.php/authentication/mypage" data-toggle="tooltip" data-placement="right" title="개인정보 수정"
                                 style="color:black;"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
-                        
+                      <br />
                         <b1 class="profile_style">
-                        kgient@naver.com
-                    </center>
+                        <?=$email?>
+                    </div>
                     
         </div>
         <div class="col-xs-12 col-md-10" style="background: #eeeeee; min-height:100vh; hight:auto">

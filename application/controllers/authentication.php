@@ -47,7 +47,7 @@ class Authentication extends CI_Controller {
         $user_info = $this->auth_model->getUserinfo($this->session->userdata('user_id'));
 
         $this->load->view('header');
-        $this->load->view('navbar');
+        $this->load->view('navbar', array('name'=>$user_info->name, 'email'=>$user_info->email));
         $this->load->view('mypage', array('info'=>$user_info));
         $this->load->view('footer');
     }

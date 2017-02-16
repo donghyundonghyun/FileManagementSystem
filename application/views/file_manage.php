@@ -8,6 +8,10 @@
                 <div class="pptpanel-thumb">
                     <div class="pptpanel-thumb-header">
                         최종 수정 날짜 : <?=$last?>  작성자 : <?=$this->session->userdata("user_id")?>
+                        <a href="/index.php/main/diff/<?=$files_id?>"
+                           style="color:black; right:25px; position:absolute"
+                            class="btn btn-default btn-xs">최신소스파일 비교
+                        </a>
                     </div>
                     <div class="pptpanel-thumb-body">
 
@@ -37,6 +41,11 @@
                                    data-toggle="modal" data-target="#contentModal" data-id="<?= $file->ID ?>">
                                     <span class="pptpanel-revision-title"><?= $file->user_filename ?></span>
                                 </a>
+                                <a href="/index.php/main/download/<?=$files_id?>/<?=$file->real_filename?>/<?=$file->user_filename?>"
+                                   style="color:black; right:50px; position:absolute">
+                                    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                                </a>
+
                                 <a href="/index.php/upload/deleteFile/<?= $file->ID ?>"
                                    style="color:black; right:25px; position:absolute">
                                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
@@ -76,8 +85,6 @@
 </div>
 
 
-<script src="/static/lib/ace/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-
 <script>
 
 $('#contentModal').on('show.bs.modal', function (event) {
@@ -109,6 +116,8 @@ $('#contentModal').on('show.bs.modal', function (event) {
                 maxLines: Infinity,
                 VScroll: true
             });
+
+
             editor.setValue(data);
 //            modal.find('.modal-body pre').text(data);
         },

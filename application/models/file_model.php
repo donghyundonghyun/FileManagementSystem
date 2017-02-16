@@ -67,4 +67,13 @@ class File_model extends CI_Model
         $this->db->set('created_user',$user_id);
         $this->db->insert('files');
     }
+
+    public function getCurrentFiles($files_id){
+        $this->db->order_by('ID','DESC');
+        $query = $this->db->get_where('files_info', array('files_id' => $files_id), 2, 0);
+        if($query->num_rows() == 0)
+            return null;
+        else
+            return $query->result();
+    }
 }
