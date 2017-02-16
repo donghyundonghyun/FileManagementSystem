@@ -66,7 +66,7 @@
     border: 0px;
     color: #fff;
     text-shadow: 0 1px rgba(0,0,0,0.1);
-    background-color: #4d90fe;
+    background-color: #5FCE51;
     padding: 17px 0px;
     font-family: roboto;
     font-size: 14px;
@@ -77,7 +77,7 @@
     /* border: 1px solid #2f5bb7; */
     border: 0px;
     text-shadow: 0 1px rgba(0,0,0,0.3);
-    background-color: #357ae8;
+    background-color: #6FDE61;
     /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
@@ -93,4 +93,194 @@
 
 .login-help{
     font-size: 12px;
+}
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    overflow-y: hidden;
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.service-logo {
+    height: 25%;
+    margin-left: 30px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.header-right {
+    margin: auto 30px;
+}
+
+.profile-image {
+    width: 30px;
+    height: 30px;
+    margin: 15px 0;
+    background-color: white;
+    vertical-align: middle;
+}
+
+.profile-email {
+    margin-left: 10px;
+    color: white;
+    vertical-align: middle;
+}
+
+.profile-drop {
+    margin-left: 8px;
+}
+
+.profile-noti {
+    vertical-align: middle;
+    margin-left: 30px;
+    padding: 0;
+}
+
+.profile-setting {
+    vertical-align: middle;
+    margin-left: 25px;
+}
+
+.divider {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.sidebar {
+    height: 100%;
+}
+
+.panel-wrapper {
+    color: black;
+    background-color: #EEEEEE;
+    height: 100%;
+    position: relative;
+}
+
+.panel-list {
+    height: 100%;
+    background-color: #EEEEEE;
+    overflow-y: scroll;
+}
+
+.sidebar-title-wrapper {
+    background-color: rgba(240,240,240,1);
+    padding: 18px;
+    padding-left: 40px;
+    color: grey;
+}
+
+.sidebar-list {
+    margin-left: 20px;
+}
+
+.panel-header {
+    background-color: rgba(40, 40, 40, 1);
+    padding: 18px;
+    padding-left: 30px;
+    color: white;
+}
+
+.panel-fab {
+    position: absolute;
+    right: 285px;
+    top: 30px;
+}
+
+.panelitem-wrapper {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.panelitem-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.panelitem-area {
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 5px #888888;
+}
+
+.panelitem-area-header {
+    background-color: #DDDDDD;
+    padding: 10px 20px;
+}
+
+.panelitem-area-author {
+    margin-left: 15px;
+}
+
+.panelitem-area-detail {
+    position: relative;
+    padding: 20px;
+    padding-bottom: 50px;
+    color: grey;
+}
+
+.pptpanel {
+    margin: 20px 0;
+}
+
+.pptpanel-title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.pptpanel-detail-wrapper {
+    margin-top: 10px;
+}
+
+.pptpanel-left {
+    padding: 10px;
+}
+
+.pptpanel-right {
+    padding: 10px;
+}
+
+.pptpanel-thumb {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px #888888;
+}
+
+.pptpanel-revision {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px #888888;
+    padding: 20px;
+}
+
+.pptpanel-thumb-header {
+    padding: 10px;
+    background-color: #DDDDDD;
+}
+
+.pptpanel-thumb-body {
+    padding: 10px;
+}
+
+.pptpanel-revision-nth {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px #888888;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.pptpanel-revision-title {
+    color: #333333;
+}
+
+.pptpanel-revision-detail {
+    color: #555555;
+    font-size: 0.8em;
 }

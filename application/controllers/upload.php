@@ -34,9 +34,9 @@ class Upload extends CI_Controller {
         }
 
         $config['upload_path']          = $path;
-        $config['allowed_types']        = 'c|cpp|java|php|js|css|html|xml|cs|py|txt';
+        $config['allowed_types']        = '*';
         $config['max_size']             = 0;
-        //$config['detect_mime']          = FALSE;
+        //$config['detect_mime']        = FALSE;
 
 
         $this->load->library('upload', $config);
@@ -68,6 +68,18 @@ class Upload extends CI_Controller {
 
         fclose($fp);
 
-        $this->load->view("");
+        echo json_encode($fr);
+    }
+
+    public function deleteFile($fileid){
+        $files_id = $this->file_model->getfilesID($fileid);
+        $filename = $this->file_model->getfilename($fileid);
+
+        $path = "static/uploads/".$files_id."/".$filename;
+        unlink($path);
+
+        $this->file_model->deletefile($fileid);
+
+        redirect("upload/fileinfo/".$files_id);
     }
 }

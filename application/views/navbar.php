@@ -17,9 +17,26 @@
 </nav>
 
 
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-6 col-md-2" style="background: white; height:100vh;">
+            <table border="0" cellpadding="0" cellspacing="0" width="40"border="1">
+                <tr>
+                    <td>
+                        <img src="https://cdn0.iconfinder.com/data/icons/connection/512/icon-16.png" width="40" height="40"  vertical-align:top;></td>
+                    </td>
+                    <td style = "text-align:left; vertical-align:center; padding:8px">
+                        김성훈
+                        <br>
+                        kgient@naver.com
+                    </td>
+                </tr>
+            </table>
+
+            <a href=""><p>
+                    사용자 정보 수정
+                </p></a>
 
         </div>
         <div class="col-xs-12 col-md-10" style="background: #eeeeee; height:100vh;">

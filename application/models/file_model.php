@@ -27,6 +27,7 @@ class File_model extends CI_Model
         return $this->db->get_where('files', array('ID'=>$files_id))->row()->filename;
     }
 
+
     public function addfile($files_id, $file_name, $file_size, $user_filename) {
         $this->db->set('files_id',$files_id);
         $this->db->set('user_filename', $user_filename);
@@ -42,6 +43,11 @@ class File_model extends CI_Model
 
     public function getfilename($fileid){
         return $this->db->get_where('files_info', array('ID'=>$fileid))->row()->real_filename;
+    }
+
+
+    public function deletefile($fileid){
+        $this->db->delete('files_info', array('ID'=>$fileid));
     }
 
 }
