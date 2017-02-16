@@ -8,7 +8,10 @@ class Main extends CI_Controller {
     }
 
     function index(){
-        echo $this->session->userdata('user_id');
+        $this->load->view("header");
+        $this->load->view("navbar");
+        $this->load->view("mainpage");
+        $this->load->view("footer");
     }
 
 }
