@@ -4,7 +4,7 @@
         <div class="pptpanel-detail-wrapper container">
             <div class="row">
                 <div class="col-md-12">
-                    <pre name="source_code" id="editor"><?=$diff?></pre>
+                    <pre name="source_code" id="editor"><?=htmlspecialchars($diff)?></pre>
                 </div>
             </div>
 
