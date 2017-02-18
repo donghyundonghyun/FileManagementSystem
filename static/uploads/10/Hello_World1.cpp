@@ -1,6 +1,11 @@
-#include<stdio.h>
+#include<iostream>
+
+using namespace std;
 
 int main(){
-    printf("Hello K-SW\n");
+
+    cout<< "Hello K-SW"<<endl;
+    
     return 0;
+
 }

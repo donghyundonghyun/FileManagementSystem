@@ -1,6 +1,9 @@
-#include<iostream>
+#include<stdio.h>
 
 int main(){
-    std::cout << "Hello K-SW" << endl;
+    
+    printf("Hello K-SW\n");
+    
     return 0;
+
 }
